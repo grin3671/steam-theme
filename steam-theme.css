@@ -1023,7 +1023,7 @@
 
 .p-profiles .profile-head .c-brief .avatar .profile-actions {
   width: calc((100% - 48px) * .23);
-  padding: 0 18px;
+  padding: 0 15px;
 }
 
 .p-profiles-show .profile-actions .talk:before {
