@@ -1308,6 +1308,16 @@
 }
 
 
+/* ИСПРАВЛЕНИЕ ОТСТУПА ОБЛОЖЕК */
+.p-profiles-show .d-cutted_covers > .c-column {
+  clear: none !important;
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+
 
 
 
