@@ -1309,6 +1309,10 @@
 
 
 /* ИСПРАВЛЕНИЕ ОТСТУПА ОБЛОЖЕК */
+.p-profiles-show .about .cc-2 > .c-column,
+.p-profiles-show .about .cc-2a > .c-column,
+.p-profiles-show .about .cc-3 > .c-column,
+.p-profiles-show .about .cc-3a > .c-column,
 .p-profiles-show .d-cutted_covers > .c-column {
   clear: none !important;
   float: none;
