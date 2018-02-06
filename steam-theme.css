@@ -962,18 +962,32 @@
 
 .p-profiles .profile-head .c-info .c-additionals a[href $= "/versions"] { max-width: 209px; }
 .p-profiles .profile-head .c-info .c-additionals a[href $= "/versions"]:before { content: "Правки контента"; }
-.p-profiles.locale-en .profile-head .c-info .c-additionals a[href $= "/versions"]:before { content: "Content changes"; }
+.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals a[href $= "/versions"]:before { content: "Content changes"; }
 .p-profiles .profile-head .c-info .c-additionals a[href $= "/video/uploads"] { max-width: 216px; }
-.p-profiles.locale-en .profile-head .c-info .c-additionals a[href $= "/video/uploads"] { max-width: 168px; }
+.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals a[href $= "/video/uploads"] { max-width: 168px; }
 .p-profiles .profile-head .c-info .c-additionals a[href $= "/video/uploads"]:before { content: "Загрузки видео"; }
-.p-profiles.locale-en .profile-head .c-info .c-additionals a[href $= "/video/uploads"]:before { content: "Video uploads"; }
+.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals a[href $= "/video/uploads"]:before { content: "Video uploads"; }
 .p-profiles .profile-head .c-info .c-additionals a[href $= "/video/versions"] { max-width: 190px; }
-.p-profiles.locale-en .profile-head .c-info .c-additionals a[href $= "/video/versions"] { max-width: 171px; }
+.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals a[href $= "/video/versions"] { max-width: 171px; }
 .p-profiles .profile-head .c-info .c-additionals a[href $= "/video/versions"]:before { content: "Правки видео"; }
-.p-profiles.locale-en .profile-head .c-info .c-additionals a[href $= "/video/versions"]:before { content: "Video changes"; }
-.p-profiles.locale-en .profile-head .c-info .c-additionals a[href $= "/comments"] { max-width: 207px; }
+.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals a[href $= "/video/versions"]:before { content: "Video changes"; }
+.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals a[href $= "/comments"] { max-width: 207px; }
 .p-profiles .profile-head .c-info .c-additionals a[href $= "/comments"]:before { content: "Комментарии"; }
-.p-profiles.locale-en .profile-head .c-info .c-additionals a[href $= "/comments"]:before { content: "Comments"; }
+.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals a[href $= "/comments"]:before { content: "Comments"; }
+
+.p-profiles .c-additionals a[href $= "/summaries"] {
+  max-width: 142px;
+}
+.p-profiles[data-locale='en'] .c-additionals a[href $= "/summaries"] {
+  max-width: 196px;
+}
+
+.p-profiles .c-additionals a[href $= "/summaries"]:before {
+  content: 'Отзывы';
+}
+.p-profiles[data-locale='en'] .c-additionals a[href $= "/summaries"]:before {
+  content: 'Summaries';
+}
 
 /* TEST 3 */
 .p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .bar,
