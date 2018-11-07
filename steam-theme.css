@@ -921,14 +921,14 @@
 
 .p-profiles .profile-head .c-info .c-additionals div {
   display: block;
+  position: relative;
   height: 29px;
   margin-bottom: 4px;
   overflow: hidden;
 }
 
 .p-profiles .profile-head .c-info .c-additionals a {
-  display: inline-block;
-  word-break: break-word;
+  word-spacing: 100px;
 }
 
 .p-profiles .profile-head .c-info .c-additionals div a {
@@ -938,17 +938,15 @@
   font-weight: 200;
 }
 
-
 .p-profiles .profile-head .c-info .c-additionals b {
   display: none;
 }
+
 .p-profiles .profile-head .c-info .c-additionals div a:hover {
   color: #9b9b9b;
 }
 
-.p-profiles .profile-head .c-info .c-additionals a:before {
-  content: "Комментарии ";
-  word-break: keep-all;
+.c-additionals > div::before {
   margin-right: 6px;
   color: #ebebeb;
   text-decoration: none;
@@ -956,38 +954,37 @@
   font-weight: 400;
 }
 
-.p-profiles .profile-head .c-info .c-additionals a:hover:before {
+.c-additionals > div:hover::before {
   text-decoration: underline;
 }
 
-.p-profiles .profile-head .c-info .c-additionals a[href $= "/versions"] { max-width: 209px; }
-.p-profiles .profile-head .c-info .c-additionals a[href $= "/versions"]:before { content: "Правки контента"; }
-.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals a[href $= "/versions"]:before { content: "Content changes"; }
-.p-profiles .profile-head .c-info .c-additionals a[href $= "/video/uploads"] { max-width: 216px; }
-.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals a[href $= "/video/uploads"] { max-width: 168px; }
-.p-profiles .profile-head .c-info .c-additionals a[href $= "/video/uploads"]:before { content: "Загрузки видео"; }
-.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals a[href $= "/video/uploads"]:before { content: "Video uploads"; }
-.p-profiles .profile-head .c-info .c-additionals a[href $= "/video/versions"] { max-width: 190px; }
-.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals a[href $= "/video/versions"] { max-width: 171px; }
-.p-profiles .profile-head .c-info .c-additionals a[href $= "/video/versions"]:before { content: "Правки видео"; }
-.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals a[href $= "/video/versions"]:before { content: "Video changes"; }
-.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals a[href $= "/comments"] { max-width: 207px; }
-.p-profiles .profile-head .c-info .c-additionals a[href $= "/comments"]:before { content: "Комментарии"; }
-.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals a[href $= "/comments"]:before { content: "Comments"; }
-
-.p-profiles .c-additionals a[href $= "/summaries"] {
-  max-width: 142px;
-}
-.p-profiles[data-locale='en'] .c-additionals a[href $= "/summaries"] {
-  max-width: 196px;
+.c-additionals > div > a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-.p-profiles .c-additionals a[href $= "/summaries"]:before {
-  content: 'Отзывы';
-}
-.p-profiles[data-locale='en'] .c-additionals a[href $= "/summaries"]:before {
-  content: 'Summaries';
-}
+.c-additionals [data-type='reviews']::before { content: 'Рецензии'; }
+[data-locale='en'] .c-additionals [data-type='reviews']::before { content: 'Reviews'; }
+
+.c-additionals [data-type='summaries']::before { content: 'Отзывы'; }
+[data-locale='en'] .c-additionals [data-type='summaries']::before { content: 'Summaries'; }
+
+.c-additionals [data-type='versions']::before { content: 'Правки контента'; }
+[data-locale='en'] .c-additionals [data-type='versions']::before { content: 'Content changes'; }
+
+.c-additionals [data-type='video_uploads']::before { content: 'Загрузки видео'; }
+[data-locale='en'] .c-additionals [data-type='video_uploads']::before { content: 'Video uploads'; }
+
+.c-additionals [data-type='video_changes']::before { content: 'Правки видео'; }
+[data-locale='en'] .c-additionals [data-type='video_changes']::before { content: 'Video changes'; }
+
+.c-additionals [data-type='comments']::before { content: 'Комментарии'; }
+[data-locale='en'] .c-additionals [data-type='comments']::before { content: 'Comments'; }
+
 
 /* TEST 3 */
 .p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .bar,
@@ -1332,6 +1329,22 @@
 }
 
 
+/* ВИД ДОСТИЖЕНИЙ ДНИМЕТРА */
+.p-profiles-show .lifetime .times .time:nth-child(1) {
+  clip-path: polygon(50% 5%, 95% 50%, 50% 95%, 5% 50%);
+}
+.p-profiles-show .lifetime .times .time:nth-child(2) {
+  clip-path: polygon(50% 0%, 100% 32%, 82% 90%, 18% 90%, 0 32%);
+}
+.p-profiles-show .lifetime .times .time:nth-child(3) {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.p-profiles-show .lifetime .times .time:nth-child(4) {
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+.p-profiles-show .lifetime .times .time:nth-child(5) {
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+}
 
 
 
@@ -1346,7 +1359,7 @@
 
 /* НАСТРОЙКА ФОНА */
 .p-profiles-show {
-  background: url(https://i.imgur.com/sHL7w9Y.jpg) fixed top center no-repeat;
+  background: url(https://i.imgur.com/Y41vUUP.jpg) fixed top center no-repeat;
   background-size: cover;
 }
 
