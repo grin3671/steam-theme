@@ -15,7 +15,7 @@
 }
 
 .p-profiles-show {
-  background-image: url(//i.imgur.com/GBQ2Xrm.jpg);
+  background-image: url(https://i.imgur.com/GBQ2Xrm.jpg);
   background-repeat: repeat-x;
   background-color: #262627;
   color: #8F98A0;
@@ -1359,7 +1359,10 @@
 
 /* НАСТРОЙКА ФОНА */
 .p-profiles-show {
-  background: url(https://i.imgur.com/Y41vUUP.jpg) fixed top center no-repeat;
+  background-attachment: fixed;
+  background-image: url(https://i.imgur.com/Y41vUUP.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
